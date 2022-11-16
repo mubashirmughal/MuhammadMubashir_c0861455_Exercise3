@@ -12,7 +12,17 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter value for a0: ");
         a0 = sc.nextDouble();
+        System.out.println("Enter value for a1: ");
+        a1 = sc.nextDouble();
+        System.out.println("Enter value for a2: ");
+        a2 = sc.nextDouble();
 
-        System.out.println(a0);
+        double a2q = a2 * a2 * a2 ;
+        double Q = (3*a1 - a2*a2) / 9;
+        double R = (9*a2*a1 - 27*a0 - 2 * a2q) / 54;
+        double D = Q * Q * Q + R * R;
+
+        System.out.println(D + " " + R + " " + Q);
+
     }
 }
