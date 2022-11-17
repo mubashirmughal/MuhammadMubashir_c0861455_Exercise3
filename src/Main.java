@@ -21,8 +21,25 @@ public class Main {
         double Q = (3*a1 - a2*a2) / 9;
         double R = (9*a2*a1 - 27*a0 - 2 * a2q) / 54;
         double D = Q * Q * Q + R * R;
+        double θ = 0.0;
+        double Z1 = 0.0;
+        double Z2 = 0.0;
+        double Z3 = 0.0;
+        double PI = 3.14;
 
-        System.out.println(D + " " + R + " " + Q);
+        if (D < 0) {
+            θ = Math.acos(R / Math.sqrt(-Q*-Q*-Q));
+            Z1 = (2 * Math.sqrt(-Q) * Math.cos(θ/3) - (a2/3));
+            Z2 = (2 * Math.sqrt(-Q) * Math.cos((θ + 2*PI) / 3) - (a2/3));
+            Z3 = (2 * Math.sqrt(-Q) * Math.cos((θ + 4*PI) / 3) - (a2/3));
+
+
+    } else {
+
+    }
+
+
+        System.out.println(D + " " + R + " " + Q + " " + θ + " " + Z1 + " " + Z2 + " " + Z3);
 
     }
 }
