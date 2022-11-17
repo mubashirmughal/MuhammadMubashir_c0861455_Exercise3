@@ -37,7 +37,8 @@ public class Main {
     } else {
 
     }
-
+        double S = Math.pow(R + (Math.sqrt(D)) , 1/3);
+        double T = Math.pow(R - (Math.sqrt(D)) , 1/3);
 
         System.out.println(D + " " + R + " " + Q + " " + θ + " " + Z1 + " " + Z2 + " " + Z3);
 
